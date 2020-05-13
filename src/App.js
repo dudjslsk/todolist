@@ -10,8 +10,8 @@ class App extends React.Component{
   constructor(props){
     super(props);
     this.state={
-      title="",
-      content="",
+      title: "",
+      content: "",
       startDate: null,
       StarTime: null,
       endDate: null,
@@ -23,18 +23,18 @@ render() {
   return (
     <div className="App">
       <div className="header"> TODO LIST</div>
-      <Paper className="input_area" variant="outlined" style={{padding: '10px'}}>
+      <Paper className="input_area" variant="outline" style={{padding: '10px'}}>
       <div className="input_area"> 
         <TextField label="제목" placeholder="제목을 입력해 주세요" size="normal" margin="normal" fullWidth required />
         <TextField label="상세내용" size="normal" margin="normal" fullWidth multiline />
         <KeyboardDatePicker
           disableTooldar
-          variant="inlien"
-          format="yyyy/MM/DD"
+          variant="inline"
+          format="yyyy/MM/DD/dd"
           margin="normal"
           label="시작 예정일"
           onChange={(value)=>console.log(value)}
-          style={{widht:'50%'}}
+          style={{widht:'100%'}}
           KeyboardButtonProps={{
             'aria-label' : 'change date',
           }}
@@ -42,7 +42,7 @@ render() {
         <KeyboardTimePicker
           margin="normal"
           label="시작시간"
-          variant="inlien"
+          variant="inline"
           onChange={(value)=>console.log(value)}
           style={{widht:'50%'}}
           KeyboardButtonProps={{
@@ -59,6 +59,6 @@ render() {
     </div>
   );
 }
-
+}
 
 export default App;

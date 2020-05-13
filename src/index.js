@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import MomentUtils from '@date-io/moment';
+import "moment/locale/ko"
 
 ReactDOM.render(
   <MuiPickersUtilsProvider utils={MomentUtils}>
